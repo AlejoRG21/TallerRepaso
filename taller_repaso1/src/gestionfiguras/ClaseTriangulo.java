@@ -1,6 +1,6 @@
 package gestionfiguras;
 
-public class ClaseTriangulo extends ClaseFigura {
+public class ClaseTriangulo extends ClaseFigura implements interface_figura{
     private float base, altura;
 
     public ClaseTriangulo(float base, float altura, String color) {
@@ -12,4 +12,24 @@ public class ClaseTriangulo extends ClaseFigura {
     public float area() {
         return (base * altura) / 2;
     }
+    @Override
+    public void autor(){
+        System.out.println("Autor: Alejandro Rivera");
+    }
+
+    @Override
+    public int valor() {
+        return (int)(base + altura);    }
+
+    @Override
+    public String descripcion() {
+        return "Triángulo de base " + base + " y altura " + altura;
+    }
+
+    @Override
+    public int numLados() {
+        return 3;
+    }
+
+
 }
