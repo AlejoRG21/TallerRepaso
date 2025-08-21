@@ -53,6 +53,13 @@ public class GestionFiguras {
     public static void resul(ClaseFigura f) {
         System.out.println("el color de la figura es " + f.getcolor());
         System.out.println("el area es " + f.area());
-    }
 
+        if (f instanceof interface_figura) {
+            interface_figura figura = (interface_figura) f;
+            figura.autor();
+            System.out.println("Descripción: " + figura.descripcion());
+            System.out.println("Número de lados: " + figura.numLados());
+            System.out.println("Valor: " + figura.valor());
+        }
+    }
 }
